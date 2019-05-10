@@ -30,13 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The main difference between the two is that .map methods will return a new array (without altering the original array) and the result can be assigned to a variables for further processing.  Whereas .foreach will execute our instructions on each elements of the array but won't return anything back.
+
 2. What is the difference between a function and a method?
+
+A method is also a function but it is nested inside an object, and it can be invoked only through the instance of the object in which it is nested. Methode are usually used to access to the object property to execute instruction related to that object.  
+A function is similar in the sense that it will execute the code inside its scope but it can be invoked directly.
 
 3. What is closure?
 
+A closure is the ability for a function to access the value of a given reference, even if that reference is defined and live outside of its block scope. These reference can then be used when ever the function needed it and can store evolving value incrementally.
+
 4. Describe the four rules of the 'this' keyword.
 
+"this" will refer to a local context and that context will varies on where and when the "this" is called/used  
+* 1. For the first princile which is at the highest level of the code environement. "This" will refer to the context inside of the console window object. It seats then at the global level.  
+* 2. For the second principle, Implicit Binding, "this" will refer to the context inside the object he is in use. It can also refer to an object passed as a parameter to the function in which it is used.  
+* 3. For the New Binding principle, "this" is used in a constructor function (an object used to construct other objects), in that case this will refer to the instance of the object newly created with the constructor
+* 4. Most functions in JS have .call() and .apply() methods available to them. Both of these methods take an object
+as their first parameter on which 'this' should be used. This is how you explicitly say that you want 'this' to be the object passed in the parameter. 
+
 5. Why do we need super() in an extended class?
+super(); give the ability to bind a "child" class to its "parent" class. The "child" class will then inherits all the existing properties of the "parent" class, in addition to its own properties. 
 
 ## Project Set up
 
