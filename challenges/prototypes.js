@@ -27,20 +27,19 @@
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-class CuboidMaker{
+function CuboidMaker(length, width, height){
   //constructor for the Person attributs
-  constructor(length, width, height){
     this.length = length;
     this.width = width;
     this.height = height;
-  }
+}
+
   // method prototype
-  volume(){
-      return this.length * this.width * this.height;
-  }
-  surfaceArea(){
-    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-  }
+CuboidMaker.prototype.volume = function() {
+    return this.length * this.width * this.height;
+}
+CuboidMaker.prototype.surfaceArea = function(){
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
 const cuboid = new CuboidMaker(4, 5, 5);
