@@ -41,16 +41,19 @@ function greeting(firstName, lastName){
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+/* 
+Because the lexical scope of `internal` is the block scope of `myFunction()` in which it is defined.
+ therefore, all nested function as access to any reference that belong to the lexical scope`
+*/
 
 const external = "I'm outside the function";
 
 function myFunction() {
-  //console.log(external);
+  console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    //console.log(internal);
+    console.log(internal);
   };
   nestedFunction();
 }
